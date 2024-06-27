@@ -31,10 +31,9 @@ feedback=[]
 name=Flask(__name__)
 CORS(name)
 @name.route('/test/<item>')
-def video_processer():
+def video_processer(video_source):
     mpDraw = mp.solutions.drawing_utils
-    model_path = "C:\\Users\\jgran_w5\\New folder\\pose_landmarker_full.task"
-    video_source = "C:\\Users\\jgran_w5\\New folder\\Sam_video_trim.mp4"
+    model_path = "pose_landmark_full.task"
     num_poses = 2
     min_pose_detection_confidence = 0.5
     min_pose_presence_confidence = 0.5
